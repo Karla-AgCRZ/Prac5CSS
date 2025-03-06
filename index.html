@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Siempre antes de iniciar a poner estilos es necesario enlazar el archivo CSS con el HTML. El link va después de title -->
+
+<!-- El orden es arriba el link de una nueva fuente y abajo el enlace a la hoja de estilos. La página para descarga de nuevas fuentes es Google Fonts - elegir fuente y clase de estilo que se quiere usar - click en get font - click en Get embed code - copy code - Copiar el código de la clase de estilo que se quiere usar.-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 5 | Alineación</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<!-- Siempre es necesario revisar la sintaxis de la hoja de estilos así para desplegar correctamente en GitHub ->  ./style.css -->
+
+<!-- Si se agrega la etiqueta de <p> al <div> se añadirá un margen por defecto. En esté ejemplo se cambió a la etiqueta de ancla <a href>-->
+
+<body>
+    <header>
+        <nav class="navbar">
+            <span id="ícono-SBucks"></span>
+            <div class="navbarbutton"><a href="#">MENÚ</a></div>
+            <div class="navbarbutton"><a href="#">REWARDS</a></div>
+        </nav>
+    </header>
+    <main>
+        <section id= "latte" class="banner">
+        <div>
+            <h1>LATTE CON STARBUCKS</h1>
+            <p>Porque nos Latte el café, nos latte acompañarte todos los días y nos latte verte sonreír.
+                Nos Latte tu mejor versión.</p>
+        </div>
+        <img src="./assets/latte.png" alt="latte">
+    </section>
+
+<!-- Al ubicar una imagen al principio de la section está se ubicará a la izquierda de la página-->
+
+        <section id= "cafés" class="banner">
+            <img src="./assets/cafés.png" alt="cafés">
+            <div>
+                <h1>NUESTRO CORTADO YA ESTÁ AQUÍ</h1>
+                <p>Recarga un momento único con nuestros nuevos: Cortado, Cortado Brown Sugar y Cortado Mocha Blanco.
+                    Una manera diferente de disfrutar tu espresso.</p>
+            </div>
+        </section>
+        <section id= "tostado" class="banner">
+            <img src="./assets/Tostado.png" alt="tostado">
+            <div>
+                <h1>UNA TRADICIÓN HECHA CAFÉ</h1>
+                <p>Un café que viene del corazón de México y de su gente.
+                    Disfruta de sus notas a canela y naranja.</p>
+            </div>
+        </section>
+        <section id= "recompensa" class="banner">
+            <div>
+                <h1>RECOMPENSAS EN 
+                    TU BEBIDA FAVORITA</h1>
+                <p>Sé parte de Starbucks Rewards y obtén más café gratis, promociones exclusivas, accesos a productos
+                    antes que nadie y más.</p>
+            </div>
+            <img src="./assets/recompensa.png" alt="recompensa">
+        </section>
+        <section id= "vasos" class="banner">
+            <img src="./assets/vasos.png" alt="vasos">
+            <div>
+                <h1>BIENVENIDOS TODOS LOS VASOS</h1>
+                <p>Hagamos del cuidado del planeta un propósito juntos.
+                    Trae tu vaso o termo favorito y obtén $8 de descuento en tu bebida.</p>
+            </div>
+        </section>
+        <section class="block_banner">
+            <div class="noticias">
+                <img src="./assets/Noticias.png" alt="noticias">
+                <p>Consulta los eventos más recientes.</p>
+            </div>
+            <div class="promociones">
+                <img src="./assets/Promociones.png" alt="promociones">
+                <p>Términos y condiciones.</p>
+            </div>
+            </section>
+
+        <button class="home-button" onclick="window.location.href='index.html'">
+            <img src="./assets/home.png" alt="Home">
+        </button>
+
+    </main>
+    <footer class="footer_container">
+        <!-- Sección de Enlaces -->
+        <section class="footer_enlaces">
+            <!-- Se agregó "column" para que compartan las mismas características para poder alinear -->
+            <div class="column">
+                <h3>Sobre Nosotros</h3>
+                <ul>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Historias Starbucks</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Atención al Cliente</h3>
+                <ul>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Facturas Electrónicas</a></li>
+                    <li><a href="#">Formas de Comprar</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Redes Sociales -->
+        <section class="redes">
+            <a id="facebook" href="" class="icon">
+                <img src="./assets/facebook.png" alt="facebook">
+            </a>
+            <a id="instagram" href="" class="icon">
+                <img src="./assets/instagram.png" alt="instagram">
+            </a>
+            <a id="X" href="" class="icon">
+                <img src="./assets/X.png" alt="X">
+            </a>
+            <a id="youtube" href="" class="icon">
+                <img src="./assets/youtube.png" alt="youtube">
+            </a>
+        </section>
+        <!-- Enlaces Secundarios -->
+        <section class="secundarios">
+            <a href="#">Accesibilidad Web</a>
+            <span>|</span>
+            <a href="#">Aviso de Privacidad</a>
+            <span>|</span>
+            <a href="#">Boletines</a>
+            <span>|</span>
+            <a href="#">Condiciones de Uso</a>
+            <span>|</span>
+            <a href="#">Mapa del Sitio</a>
+            <span>|</span>
+            <a href="#">Preferencias sobre Cookies</a>
+        </section>
+        <!-- Derechos de Autor -->
+        <section class="derechos">
+            <p>Ⓒ 2025. Starbucks Coffee Company. Reservados todos los derechos.</p>
+            <p>03/03/2025-06:00</p>
+        </section>
+    </footer>
+</body>
+</html>

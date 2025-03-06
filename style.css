@@ -1,0 +1,297 @@
+/* Al agregar este selector universal box-sizing: border-box; se ahorra el trabajo de sumar todos los lados y lo realiza solo. */
+/* El margin 0; permite que se quite el margen del body de las páginas web que ya viene por defecto. Creando estás etiquetas desde el principio es una buena forma de iniciar a estilizar una página web*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+#ícono-SBucks{
+    display:inline-block;
+    background-image: url("./assets/logo-star.png");
+    margin: 0 25px 0 60px;
+    width: 55px;
+    height: 55px;
+    background-size: cover;
+}
+
+header{
+    height: 87px;
+}
+
+/* El margin y el padding se pueden especificar por lados  (left, right, top and bottom) va de acuerdo a las manecillas del reloj o de forma general como en los dos ejemplos.*/
+
+nav{
+    padding: 13px 0;
+    background-color: #fefefe;
+}
+
+/* Es necesario quitarle el estilo por defecto a las anclas para que se pueda visualizar la pseudo-clase: hover en los botones y agregarle el color que yo quiera.*/
+
+nav a{
+    color:black;
+    text-decoration: none;
+}
+
+section img{
+    width: 50%;
+}
+
+/* Si me quiero referir a una etiqueta de clase se inicia con un ( . ) */
+
+/* El padre de los elementos a estilizar en este caso es la <nav class= "navbar"> */
+
+/* Sí uno color se declará en la etiqueta padre, el color se hereda a los hijos [A veces depende de la acción que se quiera realizar].*/
+
+.navbarbutton,#ícono-SBucks{
+    vertical-align: middle;
+}
+
+/* Al agregar una ( , ) se le indica a la etiqueta de estilo que esa condición también aplique a otra sección. */
+
+.navbarbutton{
+    display: inline-block;
+    margin: 0 20px; 
+}
+
+.navbarbutton a{
+    color: #212121;
+    padding-bottom: 30px;
+}
+
+/* Para utilizar una pseudo-clases es necesario especificar el ancla y agregar ( : ) antes de la pseudo-clase.*/
+/* Para saber cuál es el color específico de un hover. Se puede forzar el estado de un elemento de la página web para que realice la acción para la que se agregó. Por medio de la herramienta de inspección; en la pestaña de styles se da click en el botón :hov y se forza la acción.*/
+
+
+nav a:hover{
+    border-bottom: 6px solid #00754a;
+    color: #00754a;
+}
+
+.banner{
+    display: flex;
+    background-color: #1e3932;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.banner h1{
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.banner p{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.banner div{
+    align-content: center;
+    padding: 0 80px;
+}
+
+/* 2da sección */
+
+#cafés{
+    background-color:#cae390;
+    color:#1e3932;
+}
+
+#tostado{
+    background-color: #f5e1a4;
+    color:#204285;
+}
+
+#vasos{
+    background-color: #474a6f;
+}
+
+/* 3ra sección  */
+
+/* Este estilo también es la segunda forma en la que es posible realizar está sección */
+
+/* .block_banner{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+} */
+
+.block_banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.noticias{
+    display: flex;
+    flex-direction: column;
+    min-height: 685px;
+    background-color: #bdceff;
+}
+
+.noticias img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.noticias p{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    margin: 20px 0px 20px 0px;
+    line-height: 40px;
+    padding: 32px 32px;
+    text-align: center;
+    color:#204285;
+}
+
+.promociones{
+    display: flex;
+    flex-direction: column;
+    min-height: 685px;
+    background-color: #f5bc93;
+}
+
+.promociones img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.promociones p{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    margin: 20px 0px 20px 0px;
+    line-height: 40px;
+    padding: 32px 32px;
+    text-align: center;
+    color: #1d1d1b;
+}
+
+/* Botón Home */
+
+.home-button{
+    position:fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: #fefefe;
+    border: none;
+    border-radius: 65%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 6px 9px rgba(5, 5, 5, 0.286);
+    padding: 10px;
+}
+
+.home-button img{
+    width: 45px;
+    height: 40px;
+}
+
+.home-button:hover{
+    background-color:#82e5b763;
+    transform: scale(1.1);
+}
+
+/* Footer */
+
+/* Está condición es para quitar la decoración de los enlaces y el margen "padding" que viene por defecto en las listas*/
+
+ul{
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+
+footer{
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    color: #212121;
+    text-align: center;
+    /* Valores del box-shadow ej: 10px (a la derecha) 10px (hacia abajo) 20px (nivel de desenfoque) gray (color de la sombra)*/
+    box-shadow: 6px 0px 6px rgba(176, 176, 176, 0.836);
+}
+
+.footer_container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Está condición es para quitar la decoración del texto */
+
+.footer_container a{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color:#c2c0c0;
+}
+
+.footer_enlaces{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.column{
+    line-height: 50px;
+    margin: 0px 25px;
+    column-gap: 5px;
+}
+
+.redes{
+    display: flex;
+    gap: 3px;
+    width: 100%;
+    justify-content: center;
+    padding-top: 35px;
+    margin-bottom: 15px;
+    border-top: 1px solid rgb(228, 228, 228);
+}
+
+.redes a{
+    width: 65px;
+    height: 65px;
+}
+
+.secundarios{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    color: #c2c0c0;
+}
+
+.derechos{
+    display: block;
+    justify-content: center;
+    gap:30px;
+    padding-top: 25px;
+    color: #c2c0c0;
+}
+
+.derechos p{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+
